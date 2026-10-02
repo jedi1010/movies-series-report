@@ -18,6 +18,56 @@ The tool can search for movies and TV series based on type, release status, year
 * ⚡ Command-line interface
 * 🔐 TMDB API token stored through an environment variable
 
+## Example Output
+
+============================================================
+       MOVIE & SERIES INFORMATION REPORT
+============================================================
+
+[+] TMDB API connection established
+[+] Content type: Movies
+[+] Status: Upcoming
+[+] Year: 2026
+[+] Pages: 1
+
+[*] Searching TMDB...
+[*] Processing results...
+
+[+] Movies found: 20
+
+------------------------------------------------------------
+1. Example Movie Title
+------------------------------------------------------------
+Title        : Example Movie Title
+Release Date : 2026-03-15
+Rating       : 7.8
+Votes        : 1250
+Genre        : Action, Adventure
+Language     : English
+Overview     : Example movie description...
+
+------------------------------------------------------------
+2. Another Movie
+------------------------------------------------------------
+Title        : Another Movie
+Release Date : 2026-04-20
+Rating       : 7.4
+Votes        : 892
+Genre        : Drama, Thriller
+Language     : English
+Overview     : Example movie description...
+
+[*] Downloading poster images...
+[+] Poster images processed
+
+[*] Generating PDF report...
+[+] PDF report generated successfully
+
+============================================================
+Report saved to:
+movie_series_report.pdf
+============================================================
+
 ## Requirements
 
 * Python 3.9 or newer
