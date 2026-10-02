@@ -1,4 +1,4 @@
-# Movie & Series Information Report
+# Movies & Series Information Report
 
 A Python command-line tool that uses the **TMDB API** to collect movie and TV series information and generate a structured PDF report.
 
