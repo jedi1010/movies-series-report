@@ -21,21 +21,54 @@ The tool can search for movies and TV series based on type, release status, year
 ## Example Output
 
 ```text
+$ python3 mov_ser_report.py --type movies --status upcoming --year 2026
+
 ============================================================
-PHONE NUMBER INTELLIGENCE CREATED BY JEDI1010
+       MOVIE & SERIES INFORMATION REPORT
 ============================================================
-Phone number:       +97152*******
-International:      +971 52 *** ****
-E.164:              +97152*******
-National:           052 *** ****
-Country code:       +971
-National number:    52*******
-Region:             ...
-Carrier:            ...
-Number type:        Mobile
-Possible:           True
-Valid:              True
-...
+
+[+] TMDB API connection established
+[+] Content type: Movies
+[+] Status: Upcoming
+[+] Year: 2026
+[+] Pages: 1
+
+[*] Searching TMDB...
+[*] Processing results...
+
+[+] Movies found: 20
+
+------------------------------------------------------------
+1. Example Movie Title
+------------------------------------------------------------
+Title        : Example Movie Title
+Release Date : 2026-03-15
+Rating       : 7.8
+Votes        : 1250
+Genre        : Action, Adventure
+Language     : English
+Overview     : Example movie description...
+
+------------------------------------------------------------
+2. Another Movie
+------------------------------------------------------------
+Title        : Another Movie
+Release Date : 2026-04-20
+Rating       : 7.4
+Votes        : 892
+Genre        : Drama, Thriller
+Language     : English
+Overview     : Example movie description...
+
+[*] Downloading poster images...
+[+] Poster images processed
+
+[*] Generating PDF report...
+[+] PDF report generated successfully
+
+============================================================
+Report saved to:
+movie_series_report.pdf
 ============================================================
 ```
 
