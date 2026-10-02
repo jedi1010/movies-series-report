@@ -20,7 +20,24 @@ The tool can search for movies and TV series based on type, release status, year
 
 ## Example Output
 
-
+```text
+============================================================
+PHONE NUMBER INTELLIGENCE CREATED BY JEDI1010
+============================================================
+Phone number:       +97152*******
+International:      +971 52 *** ****
+E.164:              +97152*******
+National:           052 *** ****
+Country code:       +971
+National number:    52*******
+Region:             ...
+Carrier:            ...
+Number type:        Mobile
+Possible:           True
+Valid:              True
+...
+============================================================
+```
 
 ## Requirements
 
