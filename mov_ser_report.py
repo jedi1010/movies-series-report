@@ -10,6 +10,7 @@ from io import BytesIO
 from pathlib import Path
 
 import requests
+from dotenv import load_dotenv
 
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER
@@ -25,6 +26,9 @@ from reportlab.platypus import (
     KeepTogether,
     Image,
 )
+
+# Load variables from .env
+load_dotenv()
 
 
 # ============================================================
@@ -130,6 +134,7 @@ class TMDBClient:
             )
 
             if response.status_code == 401:
+
                 raise RuntimeError(
                     "TMDB authentication failed. "
                     "Check your TMDB Read Access Token."
@@ -1213,8 +1218,7 @@ def build_pdf_styles():
             textColor=colors.HexColor(
                 "#222222"
             ),
-    )
-
+        )
     )
 
     styles.add(
@@ -1533,7 +1537,6 @@ def pdf_item_table(
 
     if poster:
 
-        # Make poster clickable
         poster.hAlign = "CENTER"
 
         poster_table = Table(
@@ -1904,6 +1907,7 @@ def main():
 
     args = parser.parse_args()
 
+    # TMDB token is loaded from .env by load_dotenv()
     token = os.environ.get(
         "TMDB_TOKEN"
     )
@@ -1921,7 +1925,7 @@ def main():
 
         print(
             color(
-                "Set it with:",
+                "Set it in your .env file:",
                 Colors.BRIGHT_YELLOW
             )
         )
@@ -1930,7 +1934,7 @@ def main():
 
         print(
             color(
-                "export TMDB_TOKEN='YOUR_TOKEN'",
+                "TMDB_TOKEN=YOUR_TOKEN",
                 Colors.BRIGHT_GREEN
             )
         )
